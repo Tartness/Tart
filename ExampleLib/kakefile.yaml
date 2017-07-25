@@ -1,0 +1,7 @@
+ExampleLib:
+  cmake_version: 3.3
+  include: include
+  src: src # test
+  cpp-std: 14
+  target-properties:
+    - CXX_STANDARD=14

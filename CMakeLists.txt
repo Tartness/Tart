@@ -1,0 +1,5 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.8)
+
+INCLUDE("${CMAKE_CURRENT_LIST_DIR}/Modules/yaml-parser.cmake")
+# SET(CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/Modules")
+PARSE_YAML("./ExampleLib/kakefile.yaml")
