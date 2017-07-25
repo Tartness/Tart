@@ -6,4 +6,5 @@ ExampleLib:
   target-properties:
     - CXX_STANDARD=14
     - XCODESTUFF TRUE
+# comment
     - OTHERXCODESTUFF OFF

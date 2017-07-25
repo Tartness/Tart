@@ -13,6 +13,11 @@ FUNCTION(PARSE_YAML YAML_PATH)
     STRING(REGEX REPLACE "\#.*$" "" YAML_FILE_LINE ${YAML_FILE_LINE})
     # MESSAGE(STATUS "stripped: " ${YAML_FILE_LINE})
 
+    IF("${YAML_FILE_LINE}" STREQUAL "")
+      # MESSAGE(STATUS "Empty line found")
+      CONTINUE()
+    ENDIF()
+
     # Find variable name
     STRING(REGEX MATCH "^[^:]+" NODE_NAME ${YAML_FILE_LINE})
 
