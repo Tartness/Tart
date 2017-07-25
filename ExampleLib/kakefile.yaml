@@ -5,3 +5,5 @@ ExampleLib:
   cpp-std: 14
   target-properties:
     - CXX_STANDARD=14
+    - XCODESTUFF TRUE
+    - OTHERXCODESTUFF OFF
