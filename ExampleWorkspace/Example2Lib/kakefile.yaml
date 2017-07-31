@@ -1,5 +1,7 @@
 ExampleLib:
   cmake_version: 3.3
+  dependency:
+    - Example3Lib
   lib_name: Example2Lib
   include_dir: include
   src_dir: src # test

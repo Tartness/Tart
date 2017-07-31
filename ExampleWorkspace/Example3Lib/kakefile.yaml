@@ -1,6 +1,6 @@
 ExampleLib:
   cmake_version: 3.3
-  lib_name: Example2Lib
+  lib_name: Example3Lib
   include_dir: include
   src_dir: src # test
   cpp_std: 14

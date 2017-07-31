@@ -2,7 +2,9 @@
 
 #include <iostream>
 
+#include <bar.h>
+
 bool isItFoo(){
   std::cout << "Foo it is!" << std::endl;
-  return true;
+  return isItBar();
 }

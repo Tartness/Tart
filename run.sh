@@ -1,6 +1,5 @@
-cd ExampleWorkspace/ExampleApp
 mkdir -p build
 cd build
 rm -r ./*
-cmake ..
+cmake ../ExampleWorkspace/ExampleApp
 make -j8
