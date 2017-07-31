@@ -11,4 +11,4 @@ class Test {
   bool isItReally();
  private:
   bool is_true_;
-}
+};

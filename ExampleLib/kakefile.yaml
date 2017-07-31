@@ -1,8 +1,12 @@
 ExampleLib:
   cmake_version: 3.3
-  include: include
-  src: src # test
-  cpp-std: 14
+  lib_name: ExampleLib
+  include_dir: include
+  src_dir: src # test
+  cpp_std: 14
+  testlist:
+    - a
+    - b
   target-properties:
     - CXX_STANDARD=14
     - XCODESTUFF TRUE

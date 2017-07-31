@@ -1,9 +1,20 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.8)
 
 INCLUDE("${CMAKE_CURRENT_LIST_DIR}/Modules/yaml-parser.cmake")
-# SET(CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/Modules")
+INCLUDE("${CMAKE_CURRENT_LIST_DIR}/Modules/configure-target.cmake")
+# # SET(CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/Modules")
+#
+# PARSE_YAML("./ExampleLib/kakefile.yaml" NODE_NAMES NODE_VALS)
+#
+# MESSAGE("${NODE_NAMES}")
+# MESSAGE("${NODE_VALS}")
+#
+# FIND_LIST_VALUE("src" "${NODE_NAMES}" "${NODE_VALS}" TMP)
+# MESSAGE(${TMP})
+#
+# FIND_LIST_VALUE("cpp-std" "${NODE_NAMES}" "${NODE_VALS}" VAL_OUTPUT)
+# MESSAGE(${VAL_OUTPUT})
 
-PARSE_YAML("./ExampleLib/kakefile.yaml" NODE_NAMES NODE_VALS)
+ADD_EXECUTABLE("TestApp" "./Example/main.cc")
 
-MESSAGE("${NODE_NAMES}")
-MESSAGE("${NODE_VALS}")
+ADD_DEPENDENCY("./ExampleLib" "TestApp")
