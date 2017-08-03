@@ -12,7 +12,7 @@ For now, it assumes that all libraries are in the same folder (workspace)
 
 ## Library settings
 
-The Flags and structure of the libraries controlled with tart should include a file called `kakefile.yaml` that describes the library.
+The Flags and structure of the libraries controlled with tart should include a file called `tart.yaml` that describes the library.
 
 
 ## Example
