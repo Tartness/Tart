@@ -1,8 +1,8 @@
-ExampleLib:
+ExampleLibB:
   cmake_version: 3.3
   dependency:
-    - Example3Lib
-  lib_name: Example2Lib
+    - ExampleLibC
+  lib_name: ExampleLibB
   include_dir: include
   src_dir: src
   target_properties:

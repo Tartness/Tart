@@ -1,14 +1,14 @@
 #include <iostream>
 
-#include <test.h>
-#include <foo.h>
+#include <class-a.h>
+#include <class-b.h>
 
 int main(int argc, char **argv) {
-  Test test;
-  std::cout << test.isItReally() << std::endl;
-  std::cout << test.testTheClass() << std::endl;
-  std::cout << test.isItReally() << std::endl;
-  std::cout << "now Foo:" << std::endl;
-  isItFoo();
+  ClassA class_a;
+  ClassB class_b;
+
+  class_a.printCounter();
+  std::cout << "Class A counter now at " << class_a.getCounter() << std::endl;
+  std::cout << "Class B activity is: " << class_b.isClassActive() << std::endl;
   return 1;
 }

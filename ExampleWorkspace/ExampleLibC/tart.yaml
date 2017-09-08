@@ -1,6 +1,6 @@
-ExampleLib:
+ExampleLibC:
   cmake_version: 3.3
-  lib_name: Example3Lib
+  lib_name: ExampleLibC
   include_dir: include
   src_dir: src
   target_properties:
