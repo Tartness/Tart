@@ -5,6 +5,9 @@ PROJECT("ExampleApp")
 INCLUDE("${CMAKE_CURRENT_LIST_DIR}/../../Modules/yaml-parser.cmake")
 INCLUDE("${CMAKE_CURRENT_LIST_DIR}/../../Modules/configure-target.cmake")
 
+# Make this work instead:
+# LIST(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/../../Modules")
+
 ADD_EXECUTABLE("ExampleApp" "./main.cc")
 
 ADD_DEPENDENCY("ExampleLibA" "ExampleApp")

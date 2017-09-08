@@ -1,5 +1,7 @@
-# Tart
-The Tart Build System
+<h1>
+    <p><img src= "./Resources/tart-logo.svg" class = "logo" alt = "Tart Logo" />Tart Build System</p>
+</h1>
+
 
 ## What can I do with Tart?
 
