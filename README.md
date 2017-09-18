@@ -1,5 +1,5 @@
 <h1>
-    <p><img src= "./Resources/tart-logo.svg" class = "logo" style="vertical-align: middle" alt = "Tart Logo" height="82" /> The Tart Build System</p>
+    <p><img src= "./Resources/tart-logo.svg" class = "logo" style="vertical-align: top" alt = "Tart Logo" height="82" /> The Tart Build System</p>
 </h1>
 
 #### A smart cmake Toolchain
