@@ -1,6 +1,8 @@
 <h1>
-    <p><img src= "./Resources/tart-logo.svg" class = "logo" alt = "Tart Logo" />Tart Build System</p>
+    <p><img src= "./Resources/tart-logo.svg" class = "logo" alt = "Tart Logo" height="82" /> The Tart Build System</p>
 </h1>
+
+#### A smart cmake Toolchain
 
 
 ## What can I do with Tart?
