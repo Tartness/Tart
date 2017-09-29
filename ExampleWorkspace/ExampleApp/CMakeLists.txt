@@ -1,8 +1,7 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.8)
 
 # Include Tart Modules
-INCLUDE("${CMAKE_CURRENT_LIST_DIR}/../../Modules/yaml-parser.cmake")
-INCLUDE("${CMAKE_CURRENT_LIST_DIR}/../../Modules/configure-target.cmake")
+INCLUDE("${CMAKE_CURRENT_LIST_DIR}/../../Modules/tart-include.cmake")
 
 PROJECT("ExampleApp")
 
