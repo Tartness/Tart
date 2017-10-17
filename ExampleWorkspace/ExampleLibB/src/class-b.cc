@@ -8,7 +8,12 @@
 ClassB::ClassB() {
   is_true_ = true;
   ClassC class_c;
-  std::cout << "Class B initialized, activation is: " << is_true_ << '\n';
+  std::cout << "Class B initialized, activation is: " << is_true_ << std::endl;
+  #ifdef TART_TEST_DEFINITION
+    std::cout << "Class B was compiled with tart test definition";
+  #else
+    std::cout << "Class B was compiled with tart test definition";
+  #endif
 }
 
 bool ClassB::isClassActive() {

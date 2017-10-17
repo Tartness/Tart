@@ -1,4 +1,5 @@
 # Tart Configuration for ExampleLibA
+cmake_version: 3.3
 dependency:
   - ExampleLibC
 lib_name: ExampleLibB
@@ -7,15 +8,18 @@ src_dir: src
 target_properties:
   - CXX_STANDARD 14
 configuration_properties:
-  - TestConfig01:
+  TestConfig01:
     - TART_TEST_DEFINITION
-  - TestConfig02:
+  TestConfig02:
     - NO_TART_TEST_DEFINITION
 target_os_properties:
-  - OS01:
+  OS01:
     - NO_SDT_TEST
-  - OS02:
+    - NO_SPQA_TEST
+  OS02:
     - SDK_SUPPORT
 target_arch_properties:
-  - X64
-  - arm64
+  X64:
+    - X64_IS_AMD
+  arm64:
+    - ARM_NEVER_FAILS

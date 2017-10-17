@@ -1,7 +1,6 @@
-ExampleLibC:
-  cmake_version: 3.3
-  lib_name: ExampleLibC
-  include_dir: include
-  src_dir: src
-  target_properties:
-    - CXX_STANDARD 14
+# Tart Configuration for ExampleLibA
+lib_name: ExampleLibC
+include_dir: include
+src_dir: src
+target_properties:
+  - CXX_STANDARD 14
