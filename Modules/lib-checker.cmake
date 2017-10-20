@@ -1,0 +1,22 @@
+# Get latest git tag of current branch
+FUNCTION(ASSERT_LIB_AVAILABILITY GIT_REPO_URL GIT_TAG WORKSPACE_DIR)
+  TART_DEBUG(" ")
+  TART_DEBUG("#####################################################")
+  # Get Repo Name from git URL:
+  GET_FILENAME_COMPONENT(REPO_NAME ${GIT_REPO_URL} NAME_WE)
+  SET(WS_GIT_REPO_DIR "${WORKSPACE_DIR}/${REPO_NAME}")
+  TART_DEBUG("Asserting lib availability of ${WS_GIT_REPO_DIR}")
+  
+  IF(EXISTS ${WS_GIT_REPO_DIR})
+    CHECK_IS_DIR_GIT_REPO(${WS_GIT_REPO_DIR} ${GIT_REPO_URL} DIR_IS_GIT_REPO)
+    IF(DIR_IS_GIT_REPO)
+      GIT_TRY_CHECKOUT_TAG(${WS_GIT_REPO_DIR} ${GIT_TAG})
+    ELSE()
+      MESSAGE(FATAL_ERROR "Library at ${WS_GIT_REPO_DIR} is not a git repo!")
+    ENDIF()
+  ELSE()
+    #TODO(nidegen) check if folder needs to be created first (i guess not)
+    GIT_CLONE_REPO(${GIT_REPO_URL} ${WORKSPACE_DIR})
+    GIT_CHECKOUT(${WS_GIT_REPO_DIR} ${GIT_TAG})
+  ENDIF()
+ENDFUNCTION(ASSERT_LIB_AVAILABILITY)

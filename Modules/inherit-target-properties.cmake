@@ -1,0 +1,46 @@
+# INHERIT_TARGET_PROPERTIES inherits target porperties defined in the target that is adding the current dependency
+FUNCTION(INHERIT_TARGET_PROPERTIES PARENT_TARGET DEPENDENCY_TARGET)
+  # TODO(nidegen) getter method or definition of TARGET_PROPERTIES_LIST
+  # eventually using the target-properties.yaml file
+  FOREACH(PROPERTY_NAME ${TARGET_PROPERTIES_LIST})
+    GET_TARGET_PROPERTY(PROPERTY_VALUE ${PARENT_TARGET} ${PROPERTY_NAME})
+    # TODO(nidegen) implement following:
+    # IF(${PROPERTY_VALUE} NOT BEGIN WITH NOT_FOUND)
+      SET_TARGET_PROPERTIES(${DEPENDENCY_TARGET} PROPERTIES ${PROPERTY_NAME} ${PROPERTY_VALUE})
+    # ENDIF()
+  ENDFOREACH()
+ENDFUNCTION(INHERIT_TARGET_PROPERTIES)
+
+# INHERIT_TARGET_PROPERTIES inherits target porperties defined in the target that is adding the current dependency
+FUNCTION(INHERIT_XCODE_COMPILATION_OPTIONS PARENT_TARGET DEPENDENCY_TARGET)
+  SET(PROPERTIES_LIST  "XCODE_ATTRIBUTE_DEBUG_INFORMATION_FORMAT"
+                       "XCODE_ATTRIBUTE_GCC_PRECOMPILE_PREFIX_HEADER"
+                       "XCODE_ATTRIBUTE_IPHONEOS_DEPLOYMENT_TARGET"
+                       "XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY"
+                       "XCODE_ATTRIBUTE_DEVELOPMENT_TEAM"
+                       "XCODE_ATTRIBUTE_ORGANIZATIONNAME"
+                       "XCODE_ATTRIBUTE_SDKROOT"
+                       "XCODE_ATTRIBUTE_GCC_SYMBOLS_PRIVATE_EXTERN"
+                       "XCODE_ATTRIBUTE_CLANG_ENABLE_OBJC_ARC"
+                       "XCODE_ATTRIBUTE_COMBINE_HIDPI_IMAGES"
+                       "XCODE_ATTRIBUTE_TARGETED_DEVICE_FAMILY"
+                       "XCODE_ATTRIBUTE_VALID_ARCHS"
+                       # TODO(nidegen) remove the following from here and define general Tart dir structure
+                       "DEBUG_POSTFIX"
+                       "LIBRARY_OUTPUT_DIRECTORY"
+                       "LIBRARY_OUTPUT_DIRECTORY_DEBUG"
+                       "LIBRARY_OUTPUT_DIRECTORY_RELEASE"
+                       "LIBRARY_OUTPUT_DIRECTORY_RELWITHDEBINFO"
+                       "ARCHIVE_OUTPUT_DIRECTORY"
+                       "ARCHIVE_OUTPUT_DIRECTORY_DEBUG"
+                       "ARCHIVE_OUTPUT_DIRECTORY_RELWITHDEBINFO"
+                       "ARCHIVE_OUTPUT_DIRECTORY_RELEASE")
+                       
+  FOREACH(PROPERTY_NAME ${PROPERTIES_LIST})
+    GET_TARGET_PROPERTY(PROPERTY_VALUE ${PARENT_TARGET} ${PROPERTY_NAME})
+    # TODO(nidegen) implement following:
+    # IF(${PROPERTY_VALUE} NOT BEGIN WITH NOT_FOUND)
+      SET_TARGET_PROPERTIES(${DEPENDENCY_TARGET} PROPERTIES ${PROPERTY_NAME} ${PROPERTY_VALUE})
+    # ENDIF()
+  ENDFOREACH()
+ENDFUNCTION(INHERIT_XCODE_COMPILATION_OPTIONS)

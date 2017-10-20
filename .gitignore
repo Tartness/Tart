@@ -1,0 +1,9 @@
+Resources/*.png
+
+ExampleWorkspace/*
+!ExampleWorkspace/ExampleApp/
+!ExampleWorkspace/ExampleFramework/
+!ExampleWorkspace/ExampleLibA/
+!ExampleWorkspace/ExampleLibB/
+!ExampleWorkspace/ExampleLibC/
+build/

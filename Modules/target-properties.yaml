@@ -1,0 +1,20 @@
+# Tart Definitions of inherited target properties by
+
+# CURRENTLY UNUSED
+
+configuration_properties:
+  TestConfig01:
+    - TART_TEST_DEFINITION
+  TestConfig02:
+    - NO_TART_TEST_DEFINITION
+target_os_properties:
+  macOS:
+    - NO_SDT_TEST
+    - NO_SPQA_TEST
+  OS02:
+    - SDK_SUPPORT
+target_arch_properties:
+  x64:
+    - X64_IS_AMD
+  arm64:
+    - ARM_NEVER_FAILS

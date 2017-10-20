@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100"
+   height="100"
+   viewBox="0 0 100 100"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="tart-logo.svg"
+   inkscape:export-filename="/Users/nidegen/OneDrive/Projekte/Tart/tart-logo.png"
+   inkscape:export-xdpi="100"
+   inkscape:export-ydpi="100">
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4140">
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1;"
+         offset="0"
+         id="stop4142" />
+      <stop
+         style="stop-color:#3a00c0;stop-opacity:1"
+         offset="1"
+         id="stop4144" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4140"
+       id="linearGradient4146"
+       x1="-17.568808"
+       y1="1004.8621"
+       x2="150"
+       y2="1004.8621"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.5989011,0,0,0.8994709,10.521978,88.517886)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="-66.167374"
+     inkscape:cy="84.377089"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer2"
+     showgrid="true"
+     units="px"
+     inkscape:object-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-bbox="true"
+     inkscape:window-width="1324"
+     inkscape:window-height="723"
+     inkscape:window-x="42"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1"
+     inkscape:snap-intersection-paths="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3336" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-952.36214)"
+     style="display:inline">
+    <rect
+       style="opacity:1;fill:url(#linearGradient4146);fill-opacity:1;stroke:none;stroke-width:2.4000001;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.54838712"
+       id="rect3338"
+       width="100"
+       height="100.00002"
+       x="0"
+       y="952.36212" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2">
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#efefef;stroke-width:6.22222185;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path4149"
+       sodipodi:type="arc"
+       sodipodi:cx="50"
+       sodipodi:cy="50"
+       sodipodi:rx="35"
+       sodipodi:ry="35"
+       sodipodi:start="0.049366812"
+       sodipodi:end="0.048363597"
+       sodipodi:open="true"
+       d="M 84.95736,51.727137 A 35,35 0 0 1 48.281631,84.957792 35,35 0 0 1 15.041778,48.290398 35,35 0 0 1 51.700834,15.041351 35,35 0 0 1 84.959075,51.692066" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:24.39450645px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#efefef;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="34.667439"
+       y="71.428574"
+       id="text4151"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4153"
+         x="34.667439"
+         y="71.428574"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:54.88764191px;font-family:DINPro;-inkscape-font-specification:'DINPro Bold';fill:#efefef;fill-opacity:1;stroke:none;stroke-opacity:1">T</tspan></text>
+  </g>
+</svg>
