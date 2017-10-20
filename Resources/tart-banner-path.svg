@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="500"
+   height="100"
+   viewBox="0 0 500 100"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="tart-banner-path.svg"
+   inkscape:export-filename="/Users/nidegen/OneDrive/Projekte/Tart/tart-logo.png"
+   inkscape:export-xdpi="100"
+   inkscape:export-ydpi="100">
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4140">
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1;"
+         offset="0"
+         id="stop4142" />
+      <stop
+         style="stop-color:#3a00c0;stop-opacity:1"
+         offset="1"
+         id="stop4144" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4140"
+       id="linearGradient4146"
+       x1="-17.568808"
+       y1="1004.8621"
+       x2="150"
+       y2="1004.8621"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.9987834,0,0,0.8994709,52.685047,88.517886)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="-85.962453"
+     inkscape:cy="-39.082482"
+     inkscape:document-units="px"
+     inkscape:current-layer="text4151"
+     showgrid="true"
+     units="px"
+     inkscape:object-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-bbox="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1151"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1"
+     inkscape:snap-intersection-paths="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3336" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-952.36214)"
+     style="display:inline">
+    <rect
+       style="opacity:1;fill:url(#linearGradient4146);fill-opacity:1;stroke:none;stroke-width:2.4000001;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.54838712"
+       id="rect3338"
+       width="500.71429"
+       height="100.00002"
+       x="0"
+       y="952.36212" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2">
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#efefef;stroke-width:6.22222185;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path4149"
+       sodipodi:type="arc"
+       sodipodi:cx="250"
+       sodipodi:cy="50"
+       sodipodi:rx="35"
+       sodipodi:ry="35"
+       sodipodi:start="0.049366812"
+       sodipodi:end="0.048363597"
+       sodipodi:open="true"
+       d="M 284.95736,51.727137 A 35,35 0 0 1 248.28163,84.957792 35,35 0 0 1 215.04178,48.290398 35,35 0 0 1 251.70083,15.041351 35,35 0 0 1 284.95907,51.692066" />
+    <g
+       style="font-style:normal;font-weight:normal;font-size:24.39450645px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#efefef;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="text4151">
+      <path
+         d="m 231.56043,29.861695 36.87763,0 0,7.798976 -13.2663,0 0,32.214329 -10.31823,0 0,-32.214329 -13.2931,0 0,-7.798976 z"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:54.88764191px;font-family:DINPro;-inkscape-font-specification:'DINPro Bold';fill:#efefef;fill-opacity:1;stroke:none;stroke-opacity:1"
+         id="path4144" />
+    </g>
+  </g>
+</svg>
