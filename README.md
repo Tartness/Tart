@@ -27,7 +27,8 @@ To be able to use Tart you need to:
 To add a library `ExampleLib` to your target, Tart allows you to do so by simply add following line in in your CMakeLists.txt:
 
 ```
-ADD_DEPENDENCY("ExampleLib" "ExampleApp")
+
+ADD_TART_DEPENDENCY("ExampleApp" "ExampleLib")
 ```
 It will first Look for any existing git repo in the same folder as the current CMakeLists.txt parent folder is located. If it doesn't find any, it will clone it from its defined git repo URL.
 

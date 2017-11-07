@@ -5,7 +5,8 @@ INCLUDE("${CMAKE_CURRENT_LIST_DIR}/../../Modules/tart-include.cmake")
 
 PROJECT("ExampleApp")
 
-ADD_EXECUTABLE("ExampleApp" "./main.cc")
+# ADD_EXECUTABLE("ExampleApp" "./main.cc")
 
-ADD_DEPENDENCY("ExampleLibA" "ExampleApp")
-ADD_DEPENDENCY("ExampleLibB" "ExampleApp")
+ADD_TART_TARGET("ExampleApp")
+
+# ADD_TART_DEPENDENCY("ExampleApp" "ExampleLibAAddTartDependencyExampleAppExampleLibB")
