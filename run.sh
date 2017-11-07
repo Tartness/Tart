@@ -7,7 +7,9 @@ cd build
 cmake ..
 make -j8
 
-cd ../../ExampleFramework
-mkdir -p build
-cd build
-cmake .. -GXcode
+if [ "$(uname)" == "Darwin" ]; then
+  cd ../../ExampleFramework
+  mkdir -p build
+  cd build
+  cmake .. -GXcode
+fi
