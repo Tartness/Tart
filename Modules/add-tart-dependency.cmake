@@ -13,7 +13,7 @@ FUNCTION(ADD_TART_DEPENDENCY PARENT_BUILD_TARGET PACKAGE_NAME)
 
   FILE(GLOB_RECURSE LIB_SOURCES "${PACKAGE_DIR}/${SOURCE_DIR}/*.cc"
                                 "${PACKAGE_DIR}/${SOURCE_DIR}/*.cpp"
-                              "${PACKAGE_DIR}/${INCLUDE_DIR}/*.h")
+                                "${PACKAGE_DIR}/${INCLUDE_DIR}/*.h")
 
 
   ADD_LIBRARY(${PACKAGE_NAME} STATIC ${LIB_SOURCES})

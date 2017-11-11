@@ -8,8 +8,6 @@ cmake ..
 make -j8
 
 if [ "$(uname)" == "Darwin" ]; then
-  cd ../../ExampleFramework
-  mkdir -p build
-  cd build
-  cmake .. -GXcode
+  cd ../../../Scripts
+  sh xcode.sh
 fi
