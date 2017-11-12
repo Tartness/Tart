@@ -2,7 +2,10 @@
 cmake_version: 3.3
 dependency:
   - ExampleLibC
-  - ExampleLibD github Tartness 1.0
+  - ExampleLibD:
+    - host: github 
+    - publisher: Tartness 
+    - chackout: 1.0
 lib_name: ExampleLibB
 include_dir: include
 src_dir: src
