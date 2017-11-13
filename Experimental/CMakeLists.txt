@@ -44,4 +44,4 @@ GET_ENTRY_VALUES("dependency" "${ENTRIES}" "${ENTRY_INDENTS}" VALUES HAS_SUBTREE
 # MESSAGE(${GIT_TAG})
 
 
-# ASSERT_LIB_AVAILABILITY("https://github.com/Tartness/ExampleLibD.git" "2.0" "${CMAKE_CURRENT_LIST_DIR}/../ExampleWorkspace")
+# ASSERT_PACKAGE_AVAILABILITY("https://github.com/Tartness/ExampleLibD.git" "2.0" "${CMAKE_CURRENT_LIST_DIR}/../ExampleWorkspace")

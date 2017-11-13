@@ -5,7 +5,7 @@ dependency:
   - ExampleLibD:
     - host: github 
     - publisher: Tartness 
-    - chackout: 1.0
+    - checkout: 1.0
 lib_name: ExampleLibB
 include_dir: include
 src_dir: src
