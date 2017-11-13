@@ -1,9 +1,21 @@
 # Colourisation are taken from https://stackoverflow.com/questions/18968979/how-to-get-colorized-output-with-cmake
 
+# ANSI Color escape codes:
+
+# Black        0;30     Dark Gray     1;30
+# Red          0;31     Light Red     1;31
+# Green        0;32     Light Green   1;32
+# Brown/Orange 0;33     Yellow        1;33
+# Blue         0;34     Light Blue    1;34
+# Purple       0;35     Light Purple  1;35
+# Cyan         0;36     Light Cyan    1;36
+# Light Gray   0;37     White         1;37
+
 IF(NOT WIN32)
   STRING(ASCII 27 Esc)
   SET(ColourReset "${Esc}[m")
   SET(ColourBold  "${Esc}[1m")
+  SET(Black       "${Esc}[30m")
   SET(Red         "${Esc}[31m")
   SET(Green       "${Esc}[32m")
   SET(Yellow      "${Esc}[33m")
@@ -11,6 +23,8 @@ IF(NOT WIN32)
   SET(Magenta     "${Esc}[35m")
   SET(Cyan        "${Esc}[36m")
   SET(White       "${Esc}[37m")
+  
+  SET(BoldGray    "${Esc}[1;30m")
   SET(BoldRed     "${Esc}[1;31m")
   SET(BoldGreen   "${Esc}[1;32m")
   SET(BoldYellow  "${Esc}[1;33m")
@@ -18,6 +32,16 @@ IF(NOT WIN32)
   SET(BoldMagenta "${Esc}[1;35m")
   SET(BoldCyan    "${Esc}[1;36m")
   SET(BoldWhite   "${Esc}[1;37m")
+  
+  SET(UBlack      "${Esc}[4;30m")
+  SET(URed        "${Esc}[4;31m")
+  SET(UGreen      "${Esc}[4;32m")
+  SET(UYellow     "${Esc}[4;33m")
+  SET(UBlue       "${Esc}[4;34m")
+  SET(UMagenta    "${Esc}[4;35m")
+  SET(UCyan       "${Esc}[4;36m")
+  SET(UWhite      "${Esc}[4;37m")
+  
 ENDIF()
 
 # MESSAGE("This is normal")
@@ -83,13 +107,13 @@ ENDFUNCTION(TART_INFO)
 
 FUNCTION(TART_WARNING MESSAGE)
   IF(TRUE)
-    MESSAGE(${BoldYellow}${MESSAGE}${ColourReset})
+    MESSAGE("${BoldYellow}[!] Warning ${ColourReset}${MESSAGE}")
   ENDIF()
 ENDFUNCTION(TART_WARNING)
 
 FUNCTION(TART_ERROR MESSAGE)
   IF(TRUE)
-    MESSAGE(FATAL_ERROR ${BoldRed}${MESSAGE}${ColourReset})
+    MESSAGE(FATAL_ERROR "${BoldRed}[!] Error ${ColourReset}${MESSAGE}")
   ENDIF()
 ENDFUNCTION(TART_ERROR)
 

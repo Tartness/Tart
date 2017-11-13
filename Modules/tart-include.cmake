@@ -1,4 +1,7 @@
-# Include Tart Modules
+# Include Tart Definitions
+INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../tart-definitions.cmake")
+
+# Include Tart Macros and Functions
 INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../add-tart-dependency.cmake")
 INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../add-tart-target.cmake")
 INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../configure-tart-default.cmake")
