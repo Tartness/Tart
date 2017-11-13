@@ -49,6 +49,7 @@ FUNCTION(PROCESS_DEPENDENCY_ENTRIES PARENT_BUILD_TARGET ENTRIES ENTRY_INDENTS)
     ELSEIF(GIT_CHECKOUT AND NOT GIT_URL)
       # TODO ASSERT_PACKAGE_AVAILABILITY without url
     ELSE()
+      # TODO check if package available, even without git repo
       TART_DEBUG("No repo details for package ${DEPENDENCY}, adding local version..")
       ADD_TART_DEPENDENCY(${PARENT_BUILD_TARGET} ${DEPENDENCY})
       CONTINUE()
