@@ -63,6 +63,12 @@ ENDFUNCTION()
 # MESSAGE(FATAL_ERROR "And there's no \"z\" in \"colourise\" either.")
 
 # Seitchable Log Message
+FUNCTION(TART_TMP MESSAGE)
+  IF(TRUE)
+    MESSAGE(${BoldMagenta}${MESSAGE}${ColourReset})
+  ENDIF()
+ENDFUNCTION(TART_TMP)
+
 FUNCTION(TART_DEBUG MESSAGE)
   IF(FALSE)
     MESSAGE(${Cyan}${MESSAGE}${ColourReset})
