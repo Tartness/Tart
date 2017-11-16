@@ -1,5 +1,5 @@
-# Todo: split into single dep process and process all
-# Process an entry of the yaml dependency list
+# PROCESS_DEPENDENCY_ENTRIES() Process all entries of the dependency list from a tart.yaml file
+# 
 FUNCTION(PROCESS_DEPENDENCY_ENTRIES PARENT_BUILD_TARGET ENTRIES ENTRY_INDENTS)
   GET_ENTRY_VALUES("dependency" "${ENTRIES}" "${ENTRY_INDENTS}" DEPENDENCIES HAS_SUBTREE)
   TART_DEBUG("Processing dpendencies: ${DEPENDENCIES}")

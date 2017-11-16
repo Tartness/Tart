@@ -11,11 +11,11 @@ include_dir: include
 src_dir: src
 target_properties:
   - CXX_STANDARD 14
-configuration_properties:
+custom_configuration_properties:
   TestConfig01:
-    - TART_TEST_DEFINITION
+    - TART_TEST_DEFINITION 1
   TestConfig02:
-    - NO_TART_TEST_DEFINITION
+    - NO_TART_TEST_DEFINITION 0
 target_os_properties:
   OS01:
     - NO_SDT_TEST
