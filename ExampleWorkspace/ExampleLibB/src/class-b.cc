@@ -12,10 +12,11 @@ ClassB::ClassB() {
   ClassD class_d;
   std::cout << "Class B initialized, activation is: " << is_true_ << std::endl;
   #ifdef TART_TEST_DEFINITION
-    std::cout << "Class B was compiled with defined TART_TEST_DEFINITION";
+    std::cout << "Class B was compiled with defined TART_TEST_DEFINITION" << std::endl;
   #else
-    std::cout << "Class B was compiled without defined TART_TEST_DEFINITION";
-  #endif
+    std::cout << "Class B was compiled without defined TART_TEST_DEFINITION" << std::endl;
+  #endif  
+  std::cout << "ExampleLibB was copiled with C++ version " << __cplusplus << std::endl;
 }
 
 bool ClassB::isClassActive() {

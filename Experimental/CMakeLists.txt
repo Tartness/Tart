@@ -1,4 +1,4 @@
-CMAKE_MINIMUM_REQUIRED (VERSION 3.2)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.2)
 
 # Include Tart Modules
 INCLUDE("${CMAKE_CURRENT_LIST_DIR}/../Modules/tart-include.cmake")
@@ -17,7 +17,8 @@ SET(SOURCES "${CMAKE_CURRENT_LIST_DIR}/main.cc")
 SET(TART_CURRENT_WORKSPACE_DIR "${CMAKE_CURRENT_LIST_DIR}/Tart-Packages/")
 ADD_EXECUTABLE("Experiment" "${CMAKE_CURRENT_LIST_DIR}/main.cc")
 
-# CHECK_IF_GIT_URL("https://github.com/Tartness/Tart.git" IS_GIT_URL)
+CHECK_IF_GIT_URL("https://github.com/Tartness/Tart.git" IS_GIT_URL)
+CHECK_IF_GIT_URL("git@github.com:Tartness/Tart.git" IS_GIT_URL)
 # MESSAGE(${IS_GIT_URL})
 
 GET_YAML_ENTRIES_WITH_INDENDTS("${CMAKE_CURRENT_LIST_DIR}/tart.yaml" ENTRIES ENTRY_INDENTS)
@@ -50,4 +51,4 @@ TART_TMP(${TART_CURRENT_WORKSPACE_DIR})
 # MESSAGE(${GIT_TAG})
 
 
-# ASSERT_PACKAGE_AVAILABILITY("https://github.com/Tartness/ExampleLibD.git" "2.0" "${CMAKE_CURRENT_LIST_DIR}/../ExampleWorkspace")
+# ASSERT_PACKAGE_LOCALLY_EXISTING("https://github.com/Tartness/ExampleLibD.git" "2.0" "${CMAKE_CURRENT_LIST_DIR}/../ExampleWorkspace")

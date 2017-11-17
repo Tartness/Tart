@@ -15,3 +15,7 @@ INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../tart-log.cmake")
 INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../tart-yaml-tools.cmake")
 INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../yaml-parser-tools.cmake")
 INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../yaml-parser.cmake")
+
+TART_TMP("######################################################\n  Tart Dependency Management for C++/C/Objective-C")
+TART_TMP("     Thank for using Tart\n     (c) 2017 Tartness  www.github.com/Tartness/Tart")
+TART_TMP("######################################################")

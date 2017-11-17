@@ -1,7 +1,7 @@
 # Tart Configuration for ExampleLibA
 cmake_version: 3.3
 dependency:
-  - ExampleLibC
+  # - ExampleLibC
   - ExampleLibD:
     - host: github 
     - publisher: Tartness 

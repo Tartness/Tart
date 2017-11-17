@@ -38,17 +38,20 @@ FUNCTION(GET_CURRENT_GIT_COMMIT_ABBREVIATED_HASH GIT_REPO_DIR COMMIT_HASH)
 ENDFUNCTION(GET_CURRENT_GIT_COMMIT_ABBREVIATED_HASH)
 
 # Clone git repo
-FUNCTION(GIT_CLONE_REPO GIT_REPO_URL DESTINATION_DIR)
-  TART_WARNING("Cloning ${GIT_REPO_URL} \n  into ${DESTINATION_DIR}.\nMake sure to ignore this repo if under VCS.")
+FUNCTION(GIT_CLONE_REPO GIT_REPO_URL DESTINATION_DIR REPO_NAME)
+  TART_WARNING("Cloning ${GIT_REPO_URL} \n    into ${DESTINATION_DIR}.\n    Make sure to ignore this repo if under VCS.")
+  # EXECUTE_PROCESS(
+  #   COMMAND mkdir -p ${DESTINATION_DIR}
+  # )
   EXECUTE_PROCESS(
-    COMMAND git clone ${GIT_REPO_URL} --quiet
-    WORKING_DIRECTORY ${DESTINATION_DIR}
+    COMMAND git clone ${GIT_REPO_URL} "${DESTINATION_DIR}/${REPO_NAME}" --quiet
+    # WORKING_DIRECTORY ${DESTINATION_DIR}
   )
 ENDFUNCTION(GIT_CLONE_REPO)
 
 # Checkout git hash/tag/branch
 FUNCTION(GIT_CHECKOUT GIT_REPO_DIR DESIRED_CHECKOUT)
-  TART_DEBUG("Checking out ${DESIRED_CHECKOUT}\nof Repo ${GIT_REPO_DIR}")
+  TART_WARNING("Checking out ${DESIRED_CHECKOUT} of Repo \n   ${GIT_REPO_DIR}")
   EXECUTE_PROCESS(
     COMMAND git checkout ${DESIRED_CHECKOUT} --quiet
     WORKING_DIRECTORY ${GIT_REPO_DIR}
@@ -100,22 +103,17 @@ FUNCTION(CHECK_IS_DIR_GIT_REPO GIT_REPO_DIR DESIRED_GIT_REPO_URL DIR_IS_GIT_REPO
   ENDIF()
 ENDFUNCTION(CHECK_IS_DIR_GIT_REPO)
 
-# Get the current working branch
-FUNCTION(CHECK_IF_GIT_URL GIT_URL IS_GIT_URL)
-  # Find variable name
-  # TODO(nidegen) make use of regex instead of `git ls-remote the-url-to-test`
-  # SET(RXP "?:git|ssh|https?|git@[-\\w.]+):(\\/\\/)?(.*?)(\\.git)(\\/?|\\#[-\\d\\w._]+?)$")
-  # SET(RXP "((git|ssh|http(s)?)|(git\@[\\w\\.]+))(:(\/\/)?)([\\w\\.@\\:\/\\-\~]+)(\\.git)(\/)?")
-  # MESSAGE("${RXP}")
-  
-  # EXECUTE_PROCESS(
-  #   COMMAND git ls-remote ${GIT_URL}
-  #   OUTPUT_VARIABLE IS_GIT_URL
-  #   OUTPUT_STRIP_TRAILING_WHITESPACE
-  # )
-  # STRING(REGEX MATCH "${RXP}" MATCHED_URL ${GIT_URL})
-  # MESSAGE(${MATCHED_URL})
-  TART_DEBUG("GIT URL CHECKER NOT WORKING YET")
-  # STRING(COMPARE EQUAL "${MATCHED_URL}" "${GIT_URL}" IS_GIT_URL)
-  SET(${IS_GIT_URL} "FALSE" PARENT_SCOPE)
+# CHECK_IF_GIT_URL() Checks if GIT_URL is a valid git URL
+FUNCTION(CHECK_IF_GIT_URL GIT_URL IS_VALID_GIT_URL)
+  #TODO maybe simply use `git ls-remote the-url-to-test` command
+  TART_DEBUG("Checking if git url is valid for: ${GIT_URL}")
+  SET(GIT_SSH_REGEX "git@[a-z]+\.[a-z]+:[A-z]+\/[A-z]+")
+  SET(GIT_HTTPS_REGEX "https:\/\/[a-z]+.com\/[A-z]+[\/[A-z]+]*")
+  IF(${GIT_URL} MATCHES "${GIT_SSH_REGEX}.git|${GIT_SSH_REGEX}|${GIT_HTTPS_REGEX}|${GIT_HTTPS_REGEX}.git")
+    SET(${IS_VALID_GIT_URL} "TRUE" PARENT_SCOPE)
+    TART_DEBUG("${GIT_URL} is valid")
+  ELSE()
+    SET(${IS_VALID_GIT_URL} "FALSE" PARENT_SCOPE)
+    TART_DEBUG("${GIT_URL} is valid")
+  ENDIF()
 ENDFUNCTION(CHECK_IF_GIT_URL)

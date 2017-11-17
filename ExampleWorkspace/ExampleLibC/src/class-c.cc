@@ -6,6 +6,7 @@
 ClassC::ClassC() {
   is_true_ = true;
   std::cout << "Class C initialized, activation is: " << is_true_ << '\n';
+  std::cout << "ExampleLibC was copiled with C++ version " << __cplusplus << std::endl;
 }
 
 bool ClassC::isClassCActive() {
