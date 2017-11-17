@@ -1,7 +1,10 @@
 # Tart Configuration for ExampleLibA
 dependency:
   - ExampleLibC
-  - ExampleLibD at github Tartness 1.0 end
+  - ExampleLibD
+    - host: github 
+    - publisher: Tartness 
+    - checkout: 1.0
 lib_name: ExampleLibB
 include_dir: include
 src_dir: src

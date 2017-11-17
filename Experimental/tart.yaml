@@ -18,12 +18,12 @@ custom_configuration_properties:
     - NO_TART_TEST_DEFINITION 0
 target_os_properties:
   macOS:
-    - NO_SDT_TEST
-    - NO_SPQA_TEST
+    - NO_SDT_TEST a
+    - NO_SPQA_TEST b
   OS02:
-    - SDK_SUPPORT
+    - SDK_SUPPORT 3
 target_arch_properties:
   X64:
-    - X64_IS_AMD
+    - X64_IS_AMD 54
   arm64:
-    - ARM_NEVER_FAILS
+    - ARM_NEVER_FAILS 23
