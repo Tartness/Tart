@@ -9,7 +9,7 @@ make -j8
 
 ./ExampleApp
 
-if [ "$(uname)" == "Darwin" ]; then
-  cd ../../../Scripts
-  sh xcode.sh
-fi
+# if [ "$(uname)" == "Darwin" ]; then
+#   cd ../../../Scripts
+#   sh xcode.sh
+# fi
