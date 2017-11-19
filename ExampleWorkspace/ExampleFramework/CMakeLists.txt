@@ -10,6 +10,7 @@ INCLUDE("${CMAKE_CURRENT_LIST_DIR}/../../Modules/tart-include.cmake")
 PROJECT("EFKit")
 
 SET(EXAMPLE_IOS_FW "EFKit")
+SET(TART_TARGET_OS "iOS")
 
 ################################
 # Define Sources and Headers
@@ -30,6 +31,7 @@ CONFIGURE_FOR_IOS_10_3(${EXAMPLE_IOS_FW})
 ADD_TART_DEPENDENCY(${EXAMPLE_IOS_FW} "ExampleLibB")
 INHERIT_XCODE_COMPILATION_OPTIONS(${EXAMPLE_IOS_FW} "ExampleLibB")
 INHERIT_XCODE_COMPILATION_OPTIONS(${EXAMPLE_IOS_FW} "ExampleLibC")
+ADD_PREINSTALLED_PACKAGE("OpenGL" "${EXAMPLE_IOS_FW}")
 
 # override some flags from ExampleFramework Lib
 SET(CMAKE_C_FLAGS "-w -std=c++11")
