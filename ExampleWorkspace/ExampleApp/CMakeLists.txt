@@ -7,6 +7,6 @@ PROJECT("ExampleApp")
 
 # ADD_EXECUTABLE("ExampleApp" "./main.cc")
 
-ADD_TART_TARGET("ExampleApp")
+ADD_TART_TARGET("ExampleApp" "EXECUTABLE")
 
 # ADD_TART_DEPENDENCY("ExampleApp" "ExampleLibAAddTartDependencyExampleAppExampleLibB")
