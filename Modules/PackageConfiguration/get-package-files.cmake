@@ -1,0 +1,31 @@
+# GET_PACKAGE_FILES() Set sources according to tart.yaml file
+# 
+FUNCTION(GET_PACKAGE_FILES PACKAGE_DIR SOURCES_OUT INCLUDE_DIR_OUT)
+  
+  GET_YAML_ENTRIES_WITH_INDENDTS("${PACKAGE_DIR}/tart.yaml" ENTRIES ENTRY_INDENTS)
+  GET_ENTRY_VALUES("src_dir" "${ENTRIES}" "${ENTRY_INDENTS}" SRC_DIRS HAS_SUBTREE)
+  TART_DEBUG("Processing src_dirs: ${SRC_DIRS}")
+  SET(SOURCE_DIR "")
+  FOREACH(SRC_DIR ${SRC_DIRS})
+    TART_DEBUG("Found src_dir: ${SRC_DIR}")
+    LIST(APPEND SOURCE_DIR "${SRC_DIR}")
+  ENDFOREACH()
+  
+  GET_ENTRY_VALUES("include_dir" "${ENTRIES}" "${ENTRY_INDENTS}" INCLUDE_DIRS HAS_SUBTREE)
+  TART_DEBUG("Processing include_dirs: ${INCLUDE_DIRS}")
+  SET(PACKAGE_INCLUDE_DIR "")
+  FOREACH(INCLDE_DIR ${INCLUDE_DIRS})
+    TART_DEBUG("Found include_dir: ${INCLDE_DIR}")
+    LIST(APPEND PACKAGE_INCLUDE_DIR "${INCLDE_DIR}")
+  ENDFOREACH()
+  
+  FILE(GLOB_RECURSE LIBSOURCES "${PACKAGE_DIR}/${SOURCE_DIR}/*.cc"
+                               "${PACKAGE_DIR}/${SOURCE_DIR}/*.m"
+                               "${PACKAGE_DIR}/${SOURCE_DIR}/*.mm"
+                               "${PACKAGE_DIR}/${SOURCE_DIR}/*.cpp"
+                               "${PACKAGE_DIR}/${SOURCE_DIR}/*.c"
+                               "${PACKAGE_DIR}/${PACKAGE_INCLUDE_DIR}/*.hpp"
+                               "${PACKAGE_DIR}/${PACKAGE_INCLUDE_DIR}/*.h")
+  SET(${SOURCES_OUT} ${LIBSOURCES} PARENT_SCOPE)
+  SET(${INCLUDE_DIR_OUT} "${PACKAGE_DIR}/${PACKAGE_INCLUDE_DIR}" PARENT_SCOPE)
+ENDFUNCTION(GET_PACKAGE_FILES)
