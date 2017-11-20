@@ -41,3 +41,10 @@ The Flags and structure of the libraries controlled with tart should include a f
 
 An example can be found in the ExampleWorkspace, consisting of an Executable and 3 linked example libs.
 See how `ExampleWorkspace/ExampleApp/CMakeLists.txt` is configured. You can run it by calling `sh run.sh`.
+
+
+### Credits
+
+Copyright 2017 Tartness (Nicolas Degen / [@nidegen](github.com/nidegen))
+
+Made with ❤️ in 🇨🇭
