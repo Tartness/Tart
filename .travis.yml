@@ -8,6 +8,7 @@ before_install:
   # - sudo apt-get update -qq
 
 install: 
+  - sudo apt-get purge cmake
   - sudo apt-get install cmake
   # C++17
   # - sudo apt-get install -qq g++-6
