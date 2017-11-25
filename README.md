@@ -31,16 +31,24 @@ To add a library `ExampleLib` to your target, Tart allows you to do so by simply
 ```
 ADD_TART_DEPENDENCY("ExampleApp" "ExampleLib")
 ```
-It will first Look for any existing git repo in the same folder as the current CMakeLists.txt parent folder is located. If it doesn't find any, it will clone it from its defined git repo URL.
+It will first Look for any existing git repo in the Tart workspace (which is usually assumed to be the parent folder of the root CMakeLists.txt file). If it doesn't find any, it will clone it from its defined git repo URL.
 
-## Library settings
+## What does a repo need to be a Tart Package?
 
 The Flags and structure of the libraries controlled with tart should include a file called `tart.yaml` that describes the library.
 
 ## Example
 
-An example can be found in the ExampleWorkspace, consisting of an Executable and 3 linked example libs.
+An example can be found in the `ExampleWorkspace`, consisting of an Executable and 3 linked example libs.
 See how `ExampleWorkspace/ExampleApp/CMakeLists.txt` is configured. You can run it by calling `sh run.sh`.
+
+# Documentation
+
+## Environment Variables
+
+* `TART_TARGET_OS`: defaults to `UNDEF`
+* `TART_TARGET_ARCH`: defaults to `UNDEF`
+* `TART_CURRENT_WORKSPACE_DIR`: defaults to the parent directory of the root CMakeLists.txt file. Can be changed before any Tart functions are called.
 
 
 ### Credits
