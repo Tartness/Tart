@@ -3,4 +3,4 @@ lib_name: ExampleLibA
 include_dir: include
 src_dir: src
 target_properties:
-  - CXX_STANDARD 14
+  - CXX_STANDARD 98
