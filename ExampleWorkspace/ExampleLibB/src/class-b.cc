@@ -16,6 +16,7 @@ ClassB::ClassB() {
   #else
     std::cout << "Class B was compiled without defined TART_TEST_DEFINITION" << std::endl;
   #endif  
+  std::cout << "Pi is " << MY_CONSTANT << std::endl;
   std::cout << "ExampleLibB was copiled with C++ version " << __cplusplus << std::endl;
 }
 

@@ -10,16 +10,22 @@ include_dir: include
 src_dir: src
 target_properties:
   - CXX_STANDARD 14
-configuration_properties:
+target_compile_definitions:
+  - MY_CONSTANT="12345"
+configuration_compile_definitions:
   - TestConfig01:
-    - TART_TEST_DEFINITION
+    - CURRENT_CONFIG="ThisIs01"
   - TestConfig02:
-    - NO_TART_TEST_DEFINITION
+    - CURRENT_CONFIG="ThisIs02"
 target_os_properties:
-  - OS01:
-    - NO_SDT_TEST
-  - OS02:
-    - SDK_SUPPORT
-target_arch_properties:
-  - X64
-  - arm64
+  - macOS:
+    - XCODE_FILE_ATTRIBUTES "Client,Server"
+  - windows:
+    - VS_DOTNET_REFERENCES_COPY_LOCAL TRUE
+target_arch_compile_definitions:
+  - X64:
+    - IS_X64
+    - PI="3.1415926536f"
+  - arm64:
+    - USE_BLABLA="TRUE"
+    - PI="3.14159f"
