@@ -7,3 +7,4 @@ ExampleWorkspace/*
 !ExampleWorkspace/ExampleLibB/
 !ExampleWorkspace/ExampleLibC/
 build/
+bin/

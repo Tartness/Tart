@@ -5,7 +5,7 @@ INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../System/tart-log.cmake")
 # Include Tart Macros and Functions
 INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../Core/add-tart-dependency.cmake")
 INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../Core/add-tart-target.cmake")
-INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../PackageConfiguration/configure-tart-default.cmake")
+INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../PackageConfiguration/default-package-configuration.cmake")
 INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../CompilerConfiguration/configure-xcode.cmake")
 INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../PackageCheckout/git-tools.cmake")
 INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../PackageConfiguration/inherit-target-properties.cmake")
