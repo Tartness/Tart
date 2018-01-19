@@ -1,4 +1,5 @@
-cd Experimental
+#!/bin/bash -e
+cd ./Experimental
 mkdir -p build
 cd build
 
