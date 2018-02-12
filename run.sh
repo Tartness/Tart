@@ -6,9 +6,14 @@ cd build
 cmake ..
 make -j8
 
-./ExampleApp
+cd ..
+./bin/*/ExampleApp
+cd ../..
 
 if [ "$(uname)" == "Darwin" ]; then
-  cd ../../../Scripts
+  cd Scripts
   sh xcode.sh
+  cd ..
+  cd ./ExampleWorkspace/ExampleFramework/build
+  xcodebuild -scheme ExampleFramework | xcpretty
 fi
