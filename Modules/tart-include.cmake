@@ -1,6 +1,7 @@
 # Include Tart Definitions
 INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../System/tart-definitions.cmake")
 INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../System/tart-log.cmake")
+INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../System/tart-system-variables.cmake")
 
 # Include Tart Macros and Functions
 INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../Core/add-tart-dependency.cmake")
@@ -20,6 +21,11 @@ INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../YamlParser/tart-yaml-tools.cmake")
 INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../YamlParser/yaml-parser-tools.cmake")
 INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../YamlParser/yaml-parser.cmake")
 
+
+
+FIND_CURRENT_OS()
+FIND_CURRENT_ARCH()
+  
 TART_TMP("#######################################################")
 TART_TMP("Tart Dependency Management for C++/C/Objective-C")
 TART_TMP("  Thanks for using Tart\n\n  (c) 2017 Tartness  www.github.com/Tartness/Tart")

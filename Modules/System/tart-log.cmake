@@ -89,13 +89,13 @@ ENDFUNCTION()
 # Seitchable Log Message
 FUNCTION(TART_TMP MESSAGE)
   IF(TRUE)
-    MESSAGE(${BoldMagenta}${MESSAGE}${ColourReset})
+    MESSAGE("${BoldMagenta}${MESSAGE}${ColourReset}")
   ENDIF()
 ENDFUNCTION(TART_TMP)
 
 FUNCTION(TART_DEBUG MESSAGE)
   IF(FALSE)
-    MESSAGE(${Cyan}${MESSAGE}${ColourReset})
+    MESSAGE("${Cyan}${MESSAGE}${ColourReset}")
   ENDIF()
 ENDFUNCTION(TART_DEBUG)
 
@@ -119,6 +119,6 @@ ENDFUNCTION(TART_ERROR)
 
 FUNCTION(TART_PUBLIC MESSAGE)
   IF(TRUE)
-    MESSAGE(${Green}${MESSAGE}${ColourReset})
+    MESSAGE("${Green}${MESSAGE}${ColourReset}")
   ENDIF()
 ENDFUNCTION(TART_PUBLIC)
