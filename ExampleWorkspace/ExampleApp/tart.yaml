@@ -1,5 +1,6 @@
 # Tart Configuration for ExampleApp (not yet in use / supported)
 target_name: ExampleApp
+binary_type: executable
 src_dir: src
 target_properties:
   - CXX_STANDARD 14

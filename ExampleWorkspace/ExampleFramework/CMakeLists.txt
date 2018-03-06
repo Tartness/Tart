@@ -10,6 +10,6 @@ INCLUDE("${CMAKE_CURRENT_LIST_DIR}/../../Modules/tart-include.cmake")
 PROJECT("EFKit")
 
 
-ADD_TART_TARGET("ExampleFramework" "SHARED")
+GENERATE_TART_TARGET("ExampleFramework" "SHARED")
 
 CONFIGURE_FOR_XCODE_FW("ExampleFramework" "${CMAKE_CURRENT_LIST_DIR}/include/rocket.h")
