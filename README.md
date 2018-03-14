@@ -50,11 +50,11 @@ Tart is a dependency management system that with to main pillars:
   
   It could theoretically be written in another language. As Tart heavily relies on CMake functionalities, the toolchain is written as a collection of CMake scripts for now.
 
-Main features:
-* Automatic dependency management based on git tags
+Some highlights of Tart:
+* Automatic **dependency management** based on git tags
 * Simple library configuration in a `tart.yaml` file
-* Flexible and customisable through total interoperability with CMake
-* Supports nested dependencies
+* Flexible and customisable through total **interoperability with CMake**
+* Supports **nested dependencies**
 * Support for Workspace-style folder structure
 
 ## How can I use Tart?
