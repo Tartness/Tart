@@ -5,6 +5,7 @@ dependency:
     - host: github 
     - publisher: Tartness 
     - checkout: 3.0
+  - OpenGL
 lib_name: ExampleLibB
 include_dir: include
 src_dir: src

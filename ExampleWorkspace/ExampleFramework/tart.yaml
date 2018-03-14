@@ -13,6 +13,3 @@ target_properties:
   - MACOSX_BUNDLE_BUNDLE_NAME "EFKit"
 dependency:
   - ExampleLibB
-  # - ExampleLibC
-# external-dependency:
-#   - OpenGL

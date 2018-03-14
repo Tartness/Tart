@@ -3,6 +3,29 @@
 #include <iostream>
 #include <unordered_set>
 
+// Inlcude OpenGL
+#ifdef __APPLE__
+  #include "TargetConditionals.h"
+  #if TARGET_IPHONE_SIMULATOR
+    #include <OpenGLES/ES3/gl.h>
+    #include <OpenGLES/ES3/glext.h>
+  #elif TARGET_OS_IPHONE
+    #include <OpenGLES/ES3/gl.h>
+    #include <OpenGLES/ES3/glext.h>
+  #elif TARGET_OS_MAC
+    #include <OpenGL/gl3.h>
+    #include <OpenGL/gl3ext.h>
+  #else
+    #error "Unknown Apple platform"
+  #endif
+#elif ANDROID
+  #include <GLES3/gl31.h>
+  #include <GLES3/gl3ext.h>
+  #include <GLES3/gl3platform.h>
+#else 
+  #include <glad/glad.h>
+#endif
+
 #include <class-c.h>
 #include <class-d.h>
 

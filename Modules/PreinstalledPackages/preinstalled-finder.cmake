@@ -20,7 +20,6 @@ FUNCTION(LINK_OPENGL TARGET_LINKED_TO)
   IF(${TART_TARGET_OS} STREQUAL "iOS")
     TART_DEBUG("Adding iOS OpenGL (GLKit and OpenGLES)")
     TARGET_LINK_LIBRARIES(${TARGET_LINKED_TO} PRIVATE
-                          "-framework GLKit" # TODO: check if we can/should add 'PRIVATE'
                           "-framework OpenGLES"
     )
   ELSEIF(${TART_TARGET_OS} STREQUAL "Android")
@@ -45,8 +44,7 @@ ENDFUNCTION(LINK_OPENGL)
 FUNCTION(LINK_OPENCV TARGET_LINKED_TO)
   IF(${TART_TARGET_OS} STREQUAL "iOS")
     TARGET_LINK_LIBRARIES(${TARGET_LINKED_TO} PRIVATE
-                          "-framework opencv2" # TODO: check if we can/should add 'PRIVATE'
-                          "-framework OpenCVES"
+                          "-framework opencv2"
     )
   ELSEIF(${TART_TARGET_OS} STREQUAL "Android")
     TART_DEBUG("Adding Andorid OpenCV")
