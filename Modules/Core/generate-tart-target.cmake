@@ -49,5 +49,11 @@ FUNCTION(GENERATE_TART_TARGET PACKAGE_NAME)
   # IF(GENERATOR_IS_XCODE)
   #   INHERIT_XCODE_COMPILATION_OPTIONS(${PARENT_BUILD_TARGET} ${PACKAGE_NAME})
   # ENDIF()
+  
+  TART_TMP("#######################################################")
+  TART_TMP("#\n#     Succesfully generated Package")
+  TART_TMP("#\n#            ${PACKAGE_NAME}")
+  TART_TMP("#            +++++++++++++++++++++++++")
+  TART_TMP("#\n#######################################################")
     
 ENDFUNCTION(GENERATE_TART_TARGET)
