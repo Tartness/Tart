@@ -16,6 +16,7 @@ INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../PackageConfiguration/process-dependency-e
 INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../PackageConfiguration/process-package-compile-definitions.cmake")
 INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../PackageConfiguration/process-package-properties.cmake")
 INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../PackageConfiguration/set-default-configuration.cmake")
+INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../PackageConfiguration/set-package-header-files.cmake")
 INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../PackageConfiguration/set-package-source-files.cmake")
 INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../YamlParser/tart-yaml-tools.cmake")
 INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../YamlParser/yaml-parser-tools.cmake")
