@@ -22,8 +22,6 @@ INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../YamlParser/tart-yaml-tools.cmake")
 INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../YamlParser/yaml-parser-tools.cmake")
 INCLUDE("${CMAKE_CURRENT_LIST_FILE}/../YamlParser/yaml-parser.cmake")
 
-
-
 FIND_CURRENT_OS()
 FIND_CURRENT_ARCH()
   
