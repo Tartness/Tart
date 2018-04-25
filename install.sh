@@ -1,9 +1,12 @@
 #!/bin/bash -e
-export TART_PATH="$HOME/Developer/Tartness/Tart/"
-if hash tart 2>/dev/null; then
-  # fix this first
-  echo export PATH="$PATH":"$HOME/Developer/Tartness/Tart/tart" >> ~/.bash_profile
+
+TART_LOCATION='/Users/nicolas/Developer/Tartness/Tart'
+LINE='export PATH=$PATH:'$TART_LOCATION
+
+if ! grep -qF "$LINE" ~/.bash_profile ; then 
+  echo "$LINE" >> ~/.bash_profile;
+  chmod +x $TART_LOCATION/tart
+  source ~/.bash_profile
 else
   echo "Already installed"
 fi
-source ~/.bash_profile

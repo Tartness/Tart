@@ -1,14 +1,7 @@
 #!/bin/bash -e
-cd ./ExampleWorkspace/ExampleApp
-mkdir -p build
-cd build
-# rm -r ./*
-cmake ..
-make -j8
 
-cd ..
-./bin/*/ExampleApp
-cd ../..
+
+sh ./tart ExampleWorkspace/ExampleApp
 
 if [ "$(uname)" == "Darwin" ]; then
   cd Scripts

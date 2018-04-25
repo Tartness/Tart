@@ -89,7 +89,7 @@ ENDFUNCTION()
 # Seitchable Log Message
 FUNCTION(TART_TMP MESSAGE)
   IF(TRUE)
-    MESSAGE("${BoldMagenta}${MESSAGE}${ColourReset}")
+    MESSAGE("${BoldGreen}${MESSAGE}${ColourReset}")
   ENDIF()
 ENDFUNCTION(TART_TMP)
 
