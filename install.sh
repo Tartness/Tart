@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-TART_LOCATION='/Users/nicolas/Developer/Tartness/Tart'
+TART_LOCATION=$(pwd)
 LINE='export PATH=$PATH:'$TART_LOCATION
 
 if ! grep -qF "$LINE" ~/.bash_profile ; then 
