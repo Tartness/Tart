@@ -1,11 +1,13 @@
 Resources/*.png
 
+Experimental/*
 ExampleWorkspace/*
 !ExampleWorkspace/ExampleApp/
 !ExampleWorkspace/ExampleFramework/
 !ExampleWorkspace/ExampleLibA/
 !ExampleWorkspace/ExampleLibB/
 !ExampleWorkspace/ExampleLibC/
+
 build/
 bin/
 tart/
