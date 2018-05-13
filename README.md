@@ -1,56 +1,36 @@
 ![Tart](./Resources/tart-banner-path.svg)
 
-#### The smart dependency manager built on top of CMake
+# Tart ![Status](https://travis-ci.org/Tartness/Tart.svg?branch=master)
 
-# The Tart Build System
-## What is Tart?
+Tart is intended to be the simplest way to manage C/C++ dependencies.
 
-Tart is a dependency management system that with to main pillars:
+Tart provides two features for dependency management:
 
 1. A very simple package configuration file **tart.yaml**. A `tart.yaml` file contains all parameter to describe a Tart package such as:
  - Dependencies of other Tart packages
  - Platform specific (CMake) properties
  - Other package details and settings
 
-  An example:
+1. A **CMake toolchain** that allows to:
+  - Parse basic `.yaml` files to configure a package
+  - Clone and checkout package dependencies at desired git tag/branch/commit
+
+## Quick start
+1. Get Tart by cloning this repo to your preferred location
+1. In your CMakeLists.txt of choice, include following code after project definition: 
+```
+SET(TART_PATH "PATH_TO YOUR_LOCAL_TART_REPO")
+INCLUDE("${TART_PATH}/Modules/tart-include.cmake")
+```
+1. Add Dependency to your desired CMake Target:
 
   ```
-  dependency:
-    - ExampleLibC
-    - ExampleLibD
-      - host: github 
-      - publisher: Tartness 
-      - checkout: 3.0
-  lib_name: ExampleLibB
-  include_dir: include
-  src_dir: src
-  target_properties:
-    - CXX_STANDARD 14
-  target_compile_definitions:
-    - MY_CONSTANT="12345"
-  target_os_properties:
-    - macOS:
-      - XCODE_FILE_ATTRIBUTES "Client,Server"
-    - windows:
-      - VS_DOTNET_REFERENCES_COPY_LOCAL TRUE
-  target_arch_compile_definitions:
-    - X64:
-      - IS_X64
-      - PI="3.1415926536f"
-    - arm64:
-      - USING_ARM="true"
-      - PI="3.14159f"
+  ADD_TART_DEPENDENCY(YOUR_CMAKE_TARGET "TartPackageName")
   ```
-
-2. Currently, a pure **CMake toolchain** that allows to :
-  - Parse basic `.yaml` files
-  - Clone git repos at specific branches/tags/commits
-  - Build Logging
-  - Standardized CMake target configuration 
   
-  It could theoretically be written in another language. As Tart heavily relies on CMake functionalities, the toolchain is written as a collection of CMake scripts for now.
+1. Run cmake as usual.
 
-Some highlights of Tart:
+### Some highlights of Tart:
 * Automatic **dependency management** based on git tags
 * Simple library configuration in a `tart.yaml` file
 * Flexible and customisable through total **interoperability with CMake**
