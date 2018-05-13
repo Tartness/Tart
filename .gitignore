@@ -8,4 +8,4 @@ ExampleWorkspace/*
 !ExampleWorkspace/ExampleLibC/
 build/
 bin/
-ExampleWorkspace/ExampleApp/CMakeLists.txt
+tart/

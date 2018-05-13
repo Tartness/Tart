@@ -18,17 +18,18 @@ tlogDebug "target location: $targetLocation"
 
 if [ ! -f $targetLocation/CMakeLists.txt ]; then
   projectName=$(basename $targetLocation)
+  mkdir -p $targetLocation/tart
   echo "CMAKE_MINIMUM_REQUIRED(VERSION 3.2)
 
 PROJECT("$projectName")
 
 # Include Tart Modules
 INCLUDE($currentLocation/Modules/tart-include.cmake)
-
-GENERATE_TART_TARGET("$projectName")" >> $targetLocation/CMakeLists.txt
+SET(TART_CURRENT_WORKSPACE_DIR "$targetLocation/../")
+GENERATE_TART_TARGET("$projectName")" >> $targetLocation/tart/CMakeLists.txt
 fi
 
 mkdir -p "${targetLocation}/tart"
 mkdir -p "${targetLocation}/tart/build"
 cd "${targetLocation}/tart/build"
-cmake $targetLocation
+cmake $targetLocation/tart
