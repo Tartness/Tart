@@ -16,7 +16,7 @@ tlogDebug "relative target location: $1"
 tlogDebug "target location: $targetLocation"
 
 
-if [ ! -f $targetLocation/CMakeLists.txt ]; then
+if [ ! -f $targetLocation/tart/CMakeLists.txt ]; then
   projectName=$(basename $targetLocation)
   mkdir -p $targetLocation/tart
   echo "CMAKE_MINIMUM_REQUIRED(VERSION 3.2)
