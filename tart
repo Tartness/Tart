@@ -1,30 +1,30 @@
 #!/bin/bash -e
 
-source ./Scripts/tlog.sh
-
-tlogTemp Tart
-tlogTemp Running
-
 version="1"
 currentLocation="$(pwd)"
 targetLocation="$currentLocation/$1"
 scriptPath="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+source $scriptPath/Scripts/tlog.sh
+tlogTemp Tart
+tlogTemp Running
 
 tlogDebug "current location: $currentLocation"
 tlogDebug "script location: $scriptPath"
 tlogDebug "relative target location: $1"
 tlogDebug "target location: $targetLocation"
 
-
 if [ ! -f $targetLocation/tart/CMakeLists.txt ]; then
-  projectName=$(basename $targetLocation)
   mkdir -p $targetLocation/tart
+  cd $targetLocation
+  projectName=$(pwd | xargs basename)
+  echo $projectName
   echo "CMAKE_MINIMUM_REQUIRED(VERSION 3.2)
 
 PROJECT("$projectName")
 
 # Include Tart Modules
-INCLUDE($currentLocation/Modules/tart-include.cmake)
+INCLUDE($scriptPath/Modules/tart-include.cmake)
 SET(TART_CURRENT_WORKSPACE_DIR "$targetLocation/../")
 GENERATE_TART_TARGET("$projectName")" >> $targetLocation/tart/CMakeLists.txt
 fi
@@ -33,3 +33,4 @@ mkdir -p "${targetLocation}/tart"
 mkdir -p "${targetLocation}/tart/build"
 cd "${targetLocation}/tart/build"
 cmake $targetLocation/tart
+rm $targetLocation/tart/CMakeLists.txt
