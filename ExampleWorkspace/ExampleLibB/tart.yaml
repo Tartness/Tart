@@ -24,7 +24,7 @@ target_os_properties:
   - windows:
     - VS_DOTNET_REFERENCES_COPY_LOCAL TRUE
 target_arch_compile_definitions:
-  - X64:
+  - x64:
     - IS_X64
     - PI="3.1415926536f"
   - arm64:
